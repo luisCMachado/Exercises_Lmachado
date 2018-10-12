@@ -1,0 +1,20 @@
+#header {
+  padding: 10px;
+  font-family: 'Raleway';
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.column img {
+  width: 100%;
+  padding: 8px;
+  padding-left: 0px;
+}
+
