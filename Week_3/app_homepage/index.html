@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+
+    <div class="header flexbox__column ">
+
+        <div class="header__topbar">
+
+            <!-- HEARDER BURGUER MENU -- LOGO -->
+
+            <div class="header__menu">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span><img src="logo.png" alt="">
+                <div id="mySidenav" class="header__sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#" class="active">Paintings</a>
+                    <a href="#" class="active">Photography</a>
+                    <a href="#" class="active">Drawings</a>
+                    <a href="#" class="active">Sculpture</a>
+                    <a href="#" class="active">Prints</a>
+                    <a href="#" class="active">Limited</a>
+                    <a href="#" class="active">Features</a>
+                    <a href="#" class="active">Blog</a>
+                    <a href="#" class="active">Art Advisory</a>
+                </div>
+            </div>
+
+            <!-- HEADER SIGN IN -- CART AND SEARCH -->
+
+            <div class="header__signin">
+                <a class="header__text" href=""><i class="fas fa-user"></i></a>
+                <a class="header__text" href=""><i class="fas fa-shopping-cart"></i></a>
+                <a class="header__text" onclick="openSearch()"><i class="fas fa-search"></i></a>
+                <div id="mySearch" class="header__search">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+                    <div class="wrap">
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- HEADER MESSAGE -->
+
+        <div class="header__publicity">
+            <div class="header__publicity">
+                <h1>BUYNG ORIGINAL ART SIMPLYFIED</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MAIN BODY -->
+    <main id="main">
+
+        <!-- Selected Art Title -->
+
+        <section class="content grid">
+            <div class="content__wrap">
+                <h2 class="content__title">SELECTED ART</h2>
+                <div class="content__text">
+                    <p> Original art from around the world.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Art -->
+
+        <section class="selectedArt grid">
+            <ul>
+                <li>
+                    <div class="card">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/164455/pexels-photo-164455.jpeg?cs=srgb&dl=architecture-art-blue-164455.jpg&fm=jpg"
+                                alt="" srcset="">
+
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card-title">See What's New</h3>
+                            <p>Selected by Our Curators</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/6739/art-graffiti-abstract-vintage.jpg?cs=srgb&dl=abstract-art-berlin-6739.jpg&fm=jpg"
+                                alt="" srcset="">
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card-title">2018 Catalog</h3>
+                            <p>Meet the artists</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/1050822/pexels-photo-1050822.jpeg?cs=srgb&dl=abstract-art-artistic-1050822.jpg&fm=jpg"
+                                alt="" srcset="">
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card-title">Abstract Paintings</h3>
+                            <p>View our collection</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Featured Artists Title -->
+
+        <section class="content grid">
+            <div class="content__wrap">
+                <h2 class="content__title">FEATURED ARTISTS</h2>
+                <div class="content__text">
+                    <p> Original art from around the world.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Artists Title -->
+
+        <section class="featured grid">
+            <ul>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/589819/pexels-photo-589819.jpeg?cs=srgb&dl=art-autumn-autumn-leaves-589819.jpg&fm=jpg"
+                                alt="" srcset="">
+
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                               <P>TREES</P> 
+                               <P>Alessia Delvecchio</P> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/941553/pexels-photo-941553.jpeg?cs=srgb&dl=art-background-beautiful-941553.jpg&fm=jpg"
+                                alt="" srcset="">
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                                <P>FLOWERS</P> 
+                                <P>Alessia Delvecchio</P> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/1212406/pexels-photo-1212406.jpeg?cs=srgb&dl=abstract-art-artistic-1212406.jpg&fm=jpg"
+                                alt="" srcset="">
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                                <P>MATRIX</P> 
+                               <P>Alessia Delvecchio</P> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/713058/pexels-photo-713058.jpeg?cs=srgb&dl=clouds-country-countryside-713058.jpg&fm=jpg"
+                                alt="" srcset="">
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                                <P>PEOPLE</P> 
+                                <P>Alessia Delvecchio</P> 
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card ">
+                        <div class="img">
+                            <img class="painting" src="https://images.pexels.com/photos/1208949/pexels-photo-1208949.jpeg?cs=srgb&dl=abstract-abstract-expressionism-abstract-painting-1208949.jpg&fm=jpg"
+                                alt="" srcset="">
+                            <div class="overlay">View All</div>
+                        </div>
+                        <div class="card__content">
+                                <P>SEA</P> 
+                                <P>Alessia Delvecchio</P> 
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+      <!-- Footer -->
+  <footer id="main-footer" class="grid">
+        <div>© ARTEZAN</div>
+        <div>Project By:<a href="" target="_blank">Luís Machado</a></div>
+      </footer>
+    
+
+</body>
+
+</html>
