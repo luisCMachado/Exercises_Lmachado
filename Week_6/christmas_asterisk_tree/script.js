@@ -1,25 +1,22 @@
-var num = prompt('tree row');
-tree(num)
+var treeRow = prompt('tree row');
+tree(treeRow)
 
-function tree(treeRow) {
+function tree(num) {
     var c = 1;
-    var z=0;
-    for (i = 0; i < treeRow-z; i++) {
-     //   console.log(i)
+    var z = 0;
+    for (i = 0; i < num - z; i++) {
         var str = "";
         z++
-        for (j = i; j < treeRow/2-1; j++) {
+        for (j = i; j < num / 2 - 1; j++) {
             str = str.concat(" ");
-          //  console.log(j)
         }
         for (k = 1; k <= c; k++) {
             str = str.concat("*");
         }
-        for (j = i; j < treeRow/2-1; j++) {
+        for (j = i; j < num / 2 - 1; j++) {
             str = str.concat(" ");
-          //  console.log(j)
         }
-       alert(str);
+        alert(str);
         c += 2;
     }
 }

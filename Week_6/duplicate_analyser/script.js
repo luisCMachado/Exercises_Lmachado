@@ -1,10 +1,6 @@
-let number = prompt('numbers');
-let numbersArray= number.split('');
-let copy = [];
+let numbersArray = prompt('numbers').split('');
 
-numbersArray.sort(function(a,b) { 
-    return (a - b); 
-});
+numbersArray.sort((a,b) => (a - b));
 
 alert ('List of numbers:');
 
