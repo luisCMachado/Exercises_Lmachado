@@ -1,14 +1,18 @@
-function chrono() {
-    let timeBegan = new Date();
-    setInterval(clock);
-    function clock(){
-        let currentTime = new Date()
-            , timeElapsed = new Date(currentTime - timeBegan)
-            , min = timeElapsed.getUTCMinutes()
-            , sec = timeElapsed.getUTCSeconds()
-            , ms = timeElapsed.getUTCMilliseconds();
-            console.log(min + ":" + sec + ":" + ms)
+class chronometer {
+    constructor() {
+        this.initialTime = Date.now();
+        this.currentTime = Date.now();
+    }
+    addTime(time) {
+        this.currentTime += time;
+    }
+    startTime() {
+        setInterval(function () {
+            this.addTime(1);
+            console.log((this.currentTime - this.initialTime)/1000)
+        }.bind(this), 1);
+    }
+    getTime() {
+        return this.currentTime - this.initialTime
     }
 }
-
-chrono()
