@@ -7,7 +7,7 @@ class Instagram {
         this.OTHER_USER_LOGGED = ('log out first before you create a new account\n');
         this.SIGN_UP_OK = ('Thank you for your registration, welcome!\n');
         this.EXIT = ('You left the program, bye');
-        this.NO_EMAIL = ('We don\'t have that account\n');
+        this.UNKNOWN_EMAIL = ('We don\'t have that account\n');
         this.PASSWORD_ERROR = ('The password is incorrect\n');
         this.USER_LOGGED_IN = ('You are already logged in\n');
         this.LOG_IN_SUCESS = ("Welcome ");
@@ -16,7 +16,7 @@ class Instagram {
         this.NO_USER = ('That user does not exist\n');
         this.EMAIL_NOT_FOUND = ('We have no results for that query\n');
         this.NO_USER_LOGGED = ('Sorry, you have to be logged in to use that functionality\n');
-        this.NO_OPTION = 'We don\'t have that option\n';
+        this.UNKNOWN_OPTION = 'We don\'t have that option\n';
         this.FOLLOW = 'You now follow ';
     }
 
@@ -90,7 +90,7 @@ class Instagram {
         let password = prompt('Enter your password', 'password');
         let userObj = this.getUser(email);
         if (!this.hasUser(email)) {
-            return alert(this.NO_EMAIL);
+            return alert(this.UNKNOWN_EMAIL);
         }
         if (userObj.password !== password) {
             return alert(this.PASSWORD_ERROR);
@@ -121,7 +121,7 @@ class Instagram {
         let userToFollow = this.getUser(email);
         userToFollow.addFollowers();
         this.loggedObj.addFollowing();
-        alert(FOLLOW + userToFollow.name + "\n");
+        alert(this.FOLLOW + userToFollow.name + "\n");
     }
 
     search() {
@@ -157,7 +157,7 @@ class Instagram {
                 this.follow()
                 break;
             default:
-                alert(this.NO_OPTION)
+                alert(this.UNKNOWN_OPTION)
                 break;
         }
         return this.askUser();
