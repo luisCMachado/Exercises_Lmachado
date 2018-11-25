@@ -3,19 +3,19 @@ class Instagram {
         this.userLogged = false;
         this.userArr = [];
         this.loggedObj = [];
-        this.EMAIL_TAKEN = ('Sorry, that email is already taken\n');
-        this.OTHER_USER_LOGGED = ('log out first before you create a new account\n');
-        this.SIGN_UP_OK = ('Thank you for your registration, welcome!\n');
-        this.EXIT = ('You left the program, bye');
-        this.UNKNOWN_EMAIL = ('We don\'t have that account\n');
-        this.PASSWORD_ERROR = ('The password is incorrect\n');
-        this.USER_LOGGED_IN = ('You are already logged in\n');
-        this.LOG_IN_SUCESS = ("Welcome ");
-        this.EMAIL_INVALID = ('Insert a valid email\n');
-        this.LOGGED_OUT = ('You logged out, see you later\n');
-        this.NO_USER = ('That user does not exist\n');
-        this.EMAIL_NOT_FOUND = ('We have no results for that query\n');
-        this.NO_USER_LOGGED = ('Sorry, you have to be logged in to use that functionality\n');
+        this.EMAIL_TAKEN = 'Sorry, that email is already taken\n';
+        this.OTHER_USER_LOGGED = 'log out first before you create a new account\n';
+        this.SIGN_UP_OK = 'Thank you for your registration, welcome!\n';
+        this.EXIT = 'You left the program, bye';
+        this.UNKNOWN_EMAIL = 'We don\'t have that account\n';
+        this.PASSWORD_ERROR = 'The password is incorrect\n';
+        this.USER_LOGGED_IN = 'You are already logged in\n';
+        this.LOG_IN_SUCESS = 'Welcome ';
+        this.EMAIL_INVALID = 'Insert a valid email\n';
+        this.LOGGED_OUT = 'You logged out, see you later\n';
+        this.NO_USER = 'That user does not exist\n';
+        this.EMAIL_NOT_FOUND = 'We have no results for that query\n';
+        this.NO_USER_LOGGED = 'Sorry, you have to be logged in to use that functionality\n';
         this.UNKNOWN_OPTION = 'We don\'t have that option\n';
         this.FOLLOW = 'You now follow ';
     }
@@ -64,7 +64,7 @@ class Instagram {
         if (this.userLogged === true) {
             return alert(this.USER_LOGGED_IN);
         }
-        let name = prompt('Enter your name', 'john');
+        let name = prompt('Enter your name');
         let email = null;
         let loopIsOn = true;
         while (loopIsOn) {
@@ -77,7 +77,7 @@ class Instagram {
                 alert(this.EMAIL_TAKEN);
             }
         }
-        let password = prompt('Enter your password', 'password');
+        let password = prompt('Enter your password');
         this.createUser(name, email, password);
         alert(this.SIGN_UP_OK);
     }
@@ -86,8 +86,8 @@ class Instagram {
         if (this.userLogged === true) {
             return alert(this.USER_LOGGED_IN);
         }
-        let email = prompt('Enter your email', 'teste@mail.pt').trim();
-        let password = prompt('Enter your password', 'password');
+        let email = prompt('Enter your email').trim();
+        let password = prompt('Enter your password');
         let userObj = this.getUser(email);
         if (!this.hasUser(email)) {
             return alert(this.UNKNOWN_EMAIL);
@@ -114,7 +114,7 @@ class Instagram {
         if (!this.userLogged === true) {
             return alert(this.NO_USER_LOGGED);
         }
-        let email = prompt('email of the person he/she wants to follow').trim();
+        let email = prompt('Email to follow').trim();
         if (!this.hasUser(email)) {
             return alert(this.NO_USER);
         }
@@ -129,7 +129,7 @@ class Instagram {
         if (!this.userLogged === true) {
             return alert(this.NO_USER_LOGGED);
         }
-        let email = prompt('email').trim();
+        let email = prompt('Email to search').trim();
         if (!this.hasUser(email)) {
             return alert(this.EMAIL_NOT_FOUND);
         }
