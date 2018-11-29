@@ -62,7 +62,7 @@ class Instagram {
 
     signUp() {
         if (this.userLogged === true) {
-            return alert(this.USER_LOGGED_IN);
+            return alert(this.OTHER_USER_LOGGED);
         }
         let name = prompt('Enter your name');
         let email = null;
