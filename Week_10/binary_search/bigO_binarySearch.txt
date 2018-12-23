@@ -1,0 +1,2 @@
+O algoritmo “binary search” opera em estruturas de dados, como arrays organizados com n valores. No pior cenário possível a “time complexity“  é de O(log n) comparações , sendo o “O” a notação de “Big O” e o “n” o número de valores, no melhor cenário possível que o valor se encontra exatamente no meio, conseguindo assim finalizar com um tempo constante  de O(1).
+Em média o algoritmo funciona com uma “time complexity” de O(log n) ou seja, precisa pelo menos de “log n” passos até que se consiga dizer que o elemento que se está à procura não esteja presente.
