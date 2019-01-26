@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="floating-panel">
+        <input id="name" type="textbox" value="" placeholder="name">
+        <input id="email" type="email" value="" placeholder="email">
+        <input id="addEmail" type="button" value="Add email">
+        <input id="listEmail" type="button" value="List email">
+    </div>
+    <div id="result"></div>
+</body>
+<script>
+    document.getElementById('addEmail').addEventListener('click', function () {
+        let name = document.getElementById("name").value
+        let email = document.getElementById("email").value
+        let url = `http://localhost:3000/addUser?name=${name}&email=${email}`;
+        $.ajax({
+                url: url,
+                type: 'POST',
+            })
+            .done(function (data, textStatus, jqXHR) {
+                document.getElementById('result').innerHTML = data
+            })
+    });
+
+    document.getElementById('listEmail').addEventListener('click', function () {
+        let url = `http://localhost:3000/listMail`
+        $.ajax({
+                url: url,
+                type: 'GET',
+            })
+            .done(function (data, textStatus, jqXHR) {
+                document.getElementById('result').innerHTML = data.join('')
+            })
+    });
+</script>
+
+</html>
