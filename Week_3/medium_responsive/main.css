@@ -9,9 +9,9 @@ hr{
     font-weight: 100;
     opacity: 0.5;
 }
-/* div{ */
-    /* outline: 1px solid red; */
-/* } */
+/* div{ 
+ outline: 1px solid red;
+} */
 /*--------------    HEADER--START   -------------------*/
 
 .header{    
@@ -389,6 +389,9 @@ hr{
     color:rgba(0,0,0,.54);
     margin-bottom: 0;
 }
+.phtomag__container{
+    display: flex;
+}
 .margin__top--60 {
     margin-top: 60px;
 }
@@ -559,8 +562,13 @@ hr{
         margin-right: 12px;
     }
 
-    .all--footer{
+    .phtomag__container{
+        display: flex;
         overflow: scroll;
+    }
+    .phtomag__container::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
     }
 }
 
