@@ -9,11 +9,11 @@ const loginForm =
                     <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
                 <button id="submit" class="btn btn-danger btn-danger btn-block">Submit</button>
-                <div class="inlineContent btn-group-toggle">
-                    <label class="btn btn-outline-secondary"> 
+                <div class="inlineContent ">
+                    <label class="btn"> 
                         <input type="radio" id="signup" autocomplete="off" onclick=signUpModule()>Sign up 
                     </label>
-                    <label class="btn btn-outline-secondary active"> 
+                    <label class="btn active"> 
                         <input type="radio" id="login" autocomplete="off" checked>Log in 
                     </label>
                 </div>
@@ -38,11 +38,11 @@ const signupForm =
                     <input type="text" class="form-control" id="username" placeholder="Id">
                 </div>
                 <button id="submit" class="btn btn-danger btn-danger btn-block">Submit</button>
-                    <div class="inlineContent btn-group-toggle">
-                        <label class="btn btn-outline-secondary active"> 
+                    <div class="inlineContent">
+                        <label class="btn"> 
                             <input type="radio" id="signup" autocomplete="off" checked>Sign up 
                         </label>
-                        <label class="btn btn-outline-secondary "> 
+                        <label class="btn"> 
                             <input type="radio" id="login" autocomplete="off" onclick=logInModule()>Log in 
                         </label>
                 </div>
