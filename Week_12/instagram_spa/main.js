@@ -33,11 +33,13 @@ class Instagram {
     }
 
     emailAndPasswordMatch(email, password) {
-        for (let i = 0; i < this.userArr.length; i++) {
-            if (this.userArr[i].email == email && this.userArr[i].password == password) {
-                return true;
+        for (var i = 0; i < this.userArr.length; i++) {
+            if (this.userArr[i].email == email) {
+                if (this.userArr[i].password == password) {
+                    return true;
+                }
+                return false;
             }
-            return false;
         }
     }
 
@@ -63,7 +65,7 @@ class Instagram {
             }
         }
     }
-    
+
     getUser(email) {
         let userObj = this.userArr.find(x => x.email === email);
         return userObj;
@@ -108,6 +110,7 @@ class Instagram {
         } else {
             this.userLogged = false;
             this.loggedEmail = "";
+            this.password="";
             alert(this.LOGGED_OUT);
         }
     }
