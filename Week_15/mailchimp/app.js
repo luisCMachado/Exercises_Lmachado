@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const app = express();
 const port = 3000;
-const mailchimpApiKey = 'c053d86147e38ae8c6bd3e3414341b07-us20';
-const listUId = '7cd40f8240';
+const mailchimpApiKey = '';
+const listUId = '';
 
 app.use(bodyParser.urlencoded({
   extended: true
